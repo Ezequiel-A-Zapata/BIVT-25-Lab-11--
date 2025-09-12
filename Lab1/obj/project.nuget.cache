@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "DAJekDBfUwA=",
+  "dgSpecHash": "fD5X2ZOvoFg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Markosias\\Documents\\BIVT-25\\BIVT-25-Lab-1\\Lab1\\Lab1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/ezezapata/Documents/GitHub/BIVT-25-Lab-11--/Lab1/Lab1.csproj",
+  "expectedPackageFiles": [
+    "/Users/ezezapata/.nuget/packages/microsoft.netcore.app.ref/8.0.20/microsoft.netcore.app.ref.8.0.20.nupkg.sha512",
+    "/Users/ezezapata/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.20/microsoft.aspnetcore.app.ref.8.0.20.nupkg.sha512",
+    "/Users/ezezapata/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.20/microsoft.netcore.app.host.osx-arm64.8.0.20.nupkg.sha512"
+  ],
   "logs": []
 }
