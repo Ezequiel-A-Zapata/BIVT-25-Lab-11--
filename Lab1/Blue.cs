@@ -132,27 +132,39 @@
             bool answer = false;
 
             // code here
-            int A = a / 2;
+                            int A = a / 2;
             int B = b / 2;
             int C = c / 2;
             int S = A + B + C;
+            bool isCoin = false;
+            double each_quantity = S / 3;
+            if (S > 3)
+            { 
+                if ( S % 3 != 0)
+                {
+                    isCoin = true;
+                }else
+                {
+                    A = (int)Math.Floor(each_quantity);
+                    B = (int)Math.Floor(each_quantity);
+                    c = (int)Math.Floor(each_quantity);
 
-            if (S % 3 == 0)
-            {
-                int k = S / 3;
-                if (k >= 1 && k <= a && k <= b && k <= c)
+                }
+                if (isCoin)
+                {
+                    A = (int)Math.Ceiling(each_quantity);
+                    B = (int)Math.Ceiling(each_quantity);
+                    C = (int)(each_quantity - Math.Truncate(each_quantity) + 1);
+
                     answer = true;
+
+                }
             }
 
-            if (!answer && (S + 1) % 3 == 0)
-            {
-                int k = (S + 1) / 3;
-                if (k >= 1 && k <= a && k <= b && k <= c)
-                    answer = true;
-            }
             // end
 
             return answer;
         }
     }
+
 }  
