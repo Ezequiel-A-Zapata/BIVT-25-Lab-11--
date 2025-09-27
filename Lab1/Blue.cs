@@ -80,20 +80,14 @@ namespace Lab1
         }
         public double Task5(double x)
         {
-            double answer = 0;
-
             // code here
-            if (x < -1)
+            if (Math.Abs(x) > 1)
             {
-                answer = 0;
-            }
-            else if (x > -1 && x <= 0)
-            {
-                answer = x + 1;
+                return 1;
             }
             else
             {
-                answer = 1;
+                return x;
             }
             // end
 
@@ -115,37 +109,21 @@ namespace Lab1
             return answer;
         }
 
-    public double Task7(double d, double f)
-    {
-        double answer = 0;
-
-        if (Math.Abs(d) < Math.Abs(f))
+        public double Task7(double d, double f)
         {
-            if (d > 0)
+            double answer = 0;
+            // code here
+             int s = n * n;
+            if (s - n > 2 * n)
             {
-                answer = 1.0;  
+                if (n % 2 == 0)
+                {
+                    answer = 1;
+                }
             }
-            else if (d < 0)
-            {
-                answer = -1.0; 
-            }
-            
-        }
-        else
-        {
-            if (f > 0)
-            {
-                answer = 1.0;  
-            }
-            else if (f < 0)
-            {
-                answer = -1.0; 
-            }
-
-        }
-
+        // code end
         return answer;
-}
+        }
 
         public bool Task8(int a, int b, int c)
         {
@@ -176,3 +154,4 @@ namespace Lab1
         }
     }
 }  
+
