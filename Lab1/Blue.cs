@@ -78,21 +78,31 @@ namespace Lab1
 
             return answer;
         }
-        public double Task5(double x)
-        {
-            // code here
-            if (Math.Abs(x) > 1)
-            {
-                return 1;
-            }
-            else
-            {
-                return x;
-            }
-            // end
+    public double Task5(double x)
+    {
+        double answer = 0;  
 
-            return answer;
+        // code here
+        if (x < -1)
+        {
+            answer = 0;
         }
+        else if (x >= -1 && x <= 0)
+        {
+            answer = x + 1;
+        }
+        else if (x > 0 && x <= 1)
+        {
+            answer = 1;
+        }
+        else  // x > 1
+        {
+            answer = 1;
+        }
+        // end
+
+        return answer;
+    }
         public bool Task6(double circleS, double squareS)
         {
             bool answer = false;
@@ -112,17 +122,35 @@ namespace Lab1
         public double Task7(double d, double f)
         {
             double answer = 0;
+
             // code here
-             int s = n * n;
-            if (s - n > 2 * n)
+            if (Math.Abs(d) < Math.Abs(f))
             {
-                if (n % 2 == 0)
+                if (d > 0)
                 {
                     answer = 1;
                 }
+                else if (d < 0)
+                {
+                    answer = -1;
+                }
+                // Si d == 0, answer queda en 0
             }
-        // code end
-        return answer;
+            else
+            {
+                if (f > 0)
+                {
+                    answer = 1;
+                }
+                else if (f < 0)
+                {
+                    answer = -1;
+                }
+                // Si f == 0, answer queda en 0
+            }
+            // end
+
+            return answer;
         }
 
         public bool Task8(int a, int b, int c)
@@ -154,4 +182,5 @@ namespace Lab1
         }
     }
 }  
+
 
