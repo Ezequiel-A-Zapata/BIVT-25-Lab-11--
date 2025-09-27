@@ -1,4 +1,4 @@
-﻿namespace Lab1
+namespace Lab1
 {
     public class Blue
     {
@@ -62,7 +62,18 @@
             double abs_g = Math.Abs(g);
 
             double n_max = Math.Max(abs_d, Math.Max(abs_f, abs_g));
-            answer = n_max;
+            if (n_max == abs_d)
+            {
+                answer = d;
+            } 
+            else if (n_max == abs_f)
+            {
+                answer = f;
+            } 
+            else 
+            {
+                answer = g;
+            }
             // end
 
             return answer;
@@ -72,7 +83,7 @@
             double answer = 0;
 
             // code here
-            if (x < +-1)
+            if (x < -1)
             {
                 answer = 0;
             }
@@ -104,67 +115,64 @@
             return answer;
         }
 
-        public double Task7(double d, double f)
+    public double Task7(double d, double f)
+    {
+        double answer = 0;
+
+        if (Math.Abs(d) < Math.Abs(f))
         {
-            int answer = 0;
-
-            // code here
-            if (Math.Abs(d) < Math.Abs(f))
+            if (d > 0)
             {
-                if (d > 0)
-                {
-                    answer = 1;
-                }
+                answer = 1.0;  
             }
-            else
+            else if (d < 0)
             {
-                if (f > 0)
-                {
-                    answer = 1;
-                }
+                answer = -1.0; 
             }
-            // end
-
-            return answer;
+            
         }
+        else
+        {
+            if (f > 0)
+            {
+                answer = 1.0;  
+            }
+            else if (f < 0)
+            {
+                answer = -1.0; 
+            }
+
+        }
+
+        return answer;
+}
+
         public bool Task8(int a, int b, int c)
         {
             bool answer = false;
 
             // code here
-                            int A = a / 2;
+            int A = a / 2;
             int B = b / 2;
             int C = c / 2;
             int S = A + B + C;
-            bool isCoin = false;
-            double each_quantity = S / 3;
-            if (S > 3)
-            { 
-                if ( S % 3 != 0)
-                {
-                    isCoin = true;
-                }else
-                {
-                    A = (int)Math.Floor(each_quantity);
-                    B = (int)Math.Floor(each_quantity);
-                    c = (int)Math.Floor(each_quantity);
 
-                }
-                if (isCoin)
-                {
-                    A = (int)Math.Ceiling(each_quantity);
-                    B = (int)Math.Ceiling(each_quantity);
-                    C = (int)(each_quantity - Math.Truncate(each_quantity) + 1);
-
+            if (S % 3 == 0)
+            {
+                int k = S / 3;
+                if (k >= 1 && k <= a && k <= b && k <= c)
                     answer = true;
-
-                }
             }
 
+            if (!answer && (S + 1) % 3 == 0)
+            {
+                int k = (S + 1) / 3;
+                if (k >= 1 && k <= a && k <= b && k <= c)
+                    answer = true;
+            }
             // end
 
             return answer;
         }
     }
-
 }  
