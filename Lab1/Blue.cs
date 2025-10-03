@@ -138,8 +138,9 @@ namespace Lab1
                 {
                     answer = 1;
                 }
-
+            }
             return answer;
+            
         }
 
         public bool Task8(int a, int b, int c)
@@ -171,6 +172,7 @@ namespace Lab1
         }
     }
 }  
+
 
 
 
