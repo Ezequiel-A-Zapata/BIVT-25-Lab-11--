@@ -128,13 +128,9 @@ namespace Lab1
             {
                 if (d > 0)
                 {
-                    answer = 1;
-                }
-                else if (d < 0)
-                {
                     answer = -1;
                 }
-                // Si d == 0, answer queda en 0
+
             }
             else
             {
@@ -142,13 +138,6 @@ namespace Lab1
                 {
                     answer = 1;
                 }
-                else if (f < 0)
-                {
-                    answer = -1;
-                }
-                // Si f == 0, answer queda en 0
-            }
-            // end
 
             return answer;
         }
@@ -182,5 +171,6 @@ namespace Lab1
         }
     }
 }  
+
 
 
